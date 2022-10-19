@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dicee</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container">
+      <h1>Refresh Me</h1>
+
+      <div class="dice">
+        <p>Player 1</p>
+        <img class="img1" src="">
+      </div>
+
+      <div class="dice">
+        <p>Player 2</p>
+        <img class="img2" src="">
+      </div>
+      
+    </div>
+  
+        
+      
+   
+
+    <script>
+     var heading =  document.querySelector('h1')
+     var randomnum1 = Math.floor(Math.random()*6)+1
+      var randomImage = "dice"+randomnum1+".png"
+      var randomnum2 = Math.floor(Math.random()*6)+1
+      var randomImage2 = "dice"+randomnum2+".png"
+      var randomImageSrc = "images/"+randomImage;
+      var randomImageSrc2 = "images/"+randomImage2;
+      var image1 = document.querySelectorAll("img")[0]
+      var image2 = document.querySelectorAll("img")[1]
+      image1.setAttribute("src",randomImageSrc)
+      image2.setAttribute("src",randomImageSrc2)
+
+      if(randomnum1>randomnum2){
+        heading.innerText="player1 won"
+      }
+      else if(randomnum2>randomnum1){
+        heading.innerText="player2 won"
+      }
+      else{
+        heading.innerText="draw"
+      }
+    </script>
+  </body>
+
+  <footer>
+    
+  </footer>
+</html>
